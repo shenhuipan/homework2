@@ -1,0 +1,124 @@
+\documentclass{tufte-handout}
+
+\title{HomeWork2}
+
+\author[The Academy]{ShenhuiPan}
+
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+  
+  
+  
+    %MADNESS
+  
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{units}% To use \nicefrac
+\usepackage{cancel}% To use \cancel
+\usepackage{physymb}%To use r
+\usepackage{sectsty} % Allows customizing section commands
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgf,tikz}%To draw 
+\usepackage{pgfplots}%To draw 
+\usetikzlibrary{shapes,arrows}%To draw 
+\usetikzlibrary{patterns,fadings}
+ \usetikzlibrary{decorations.pathreplacing}%To draw curly braces 
+ \usetikzlibrary{snakes}%To draw 
+ \usetikzlibrary{spy}%To do zoom-in
+ \usepackage{setspace}%Set margins and such
+ %\usepackage{3dplot}%To draw in 3D
+\usepackage{framed}%To get shade behind text
+
+
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}%setting shade color
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+  
+  
+
+  
+  
+
+% Standardize command font styles and environments
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+
+
+
+\normalsize
+
+%this generates 1cm of vertical space
+\vspace{1cm}
+\section{Nested for loop}
+
+It's about i learned how to construct array,and shows on python.
+
+\marginnote[30pt]{This is a example that show a construct a array like 5*5 square.}
+
+\begin{shaded}
+\begin{verbatim}
+            construct a 5*5 array:
+            [[0,1,2,3,4],
+             [0,1,2,3,4],
+             [0,1,2,3,4],
+             [0,1,2,3,4],
+             [0,1,2,3,4]]
+\end{verbatim}
+\end{shaded}
+
+\vspace{1cm}
+
+\section{In the python code}
+
+\marginnote[40pt]{Here you can comment on your python code,its 2 different results.So when we type this code, we still need care of this part. }
+
+\begin{framed}
+\begin{verbatim}
+a=[]                         
+for i in range (5):                 for i in range(5):
+    a=a+range(5)                        a=a+[range(5)]
+print a                                 print a  
+\end{verbatim}
+\end{framed}
+
+\marginnote[40pt]{sum all numbers in array b shows like that using a nested for loop}
+
+\begin{shaded}
+\begin{verbatim}
+s=0
+for i in range(5):
+for j in range(5):
+s=s+b[i][j]
+print s
+\end{verbatim}
+\end{shaded}
+
+\bibliography{sample-handout}
+\bibliographystyle{plainnat}
+
+
+
+\end{document}
